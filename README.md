@@ -1,4 +1,4 @@
-# cis18 benchmarks ubuntu 20/22 and debian 11 follwing IG1
+# cis18 benchmarks(IG1) ubuntu 20/22 and debian 11
 
 ## Prerequisites before running the script
 
