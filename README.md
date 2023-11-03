@@ -41,7 +41,6 @@ Run script as sudo or root
 
 Helps you understand every implemention and why CIS recommend them for security
 
-Run script as sudo or root
 
 ## Running the script on your Ubuntu/Debian server
 
