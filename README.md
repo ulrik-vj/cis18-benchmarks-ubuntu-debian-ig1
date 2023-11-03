@@ -7,6 +7,7 @@ It's function is only intended for one time use on a new server setup.
 ## Info regarding hostbased firewall, remote central logserver
 
 **Firewall** this script is using IPtables. Not UFW or NFtables, they are removed according to CIS requirements, because IPtables was chosen as primary.
+
 **Log server** this script is using Wazuh as central log server [What is Wazuh ?](https://documentation.wazuh.com/current/getting-started/architecture.html)
 
 ## Prerequisites before running the script
