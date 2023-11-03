@@ -127,12 +127,11 @@ perform_command_option() {
             return
         fi
     fi
-    
-	echo "Running command: $command" > /dev/null 2>&1
+
+    echo "Running command: $command" > /dev/null 2>&1
     # Execute the command silently
     bash -c "$command" #> /dev/null 2>&1
-
-  	command_exit_status=$?
+    command_exit_status=$?
     # Check the return code of the command
     if [ "$command_exit_status" -eq 0 ]; then
     #if $command; then
@@ -146,7 +145,7 @@ perform_command_option() {
 
     # Print an empty line after the action completion
     echo
-    
+
 }
 
 
@@ -158,17 +157,16 @@ perform_manual_command() {
     command_to_run="$3"
 
     # ANSI color codes
-	echo -e "$benchmark"
-	
+    echo -e "$benchmark"
     # Print the command to be executed
     echo "You can audit the benchmark with: $command_to_run"
 
     # Execute the command
     # Check the return code of the command
-    
+
     echo -e "$remidation"
     echo -e "${yellow}benchmark status: Requires Manual change from user!${reset}"
-	# count_benchmarks
+    # count_benchmarks
     # Print newline after action completion
     echo "Moving on to next benchmark..."
 
