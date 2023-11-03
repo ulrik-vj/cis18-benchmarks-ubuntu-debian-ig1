@@ -12,31 +12,31 @@ It's function is only intended for one time use on a new server setup.
 
 ## Prerequisites before running the script
 
-1. Partitions
+**Partitions**
 
 If you wish having seperate partitions according to CIS 18 IG1, you must create these during installation of server. Pick sizes of your prefered liking:
 
-/var
-/var/tmp
-/var/log
-/var/log/audit
-/tmp
-/
-/home
+- /var
+- /var/tmp
+- /var/log
+- /var/log/audit
+- /tmp
+- /
+- /home
 
-2. Prepare firewall rules
+**Prepare firewall rules**
 
 I have made a iptables_rules.txt file with some default rules for cis recommendations. Correct it to your usecase, but make sure its according to recommendations at the same time.
 
-3. Chosing what benchhmark to run 
+**Chosing what benchhmark to run**
 
 At the end of the script there is a main function calling the other functions. You can pick and choice what benchmarks you want according to those. Lets say you do not wish to use to use Wazuh because you dont have a Wazuh server, comment the function call out. Then it will be your own responsibilty to setup this part yourself. Same goes for the rest.
 
-4. Privileges needed to run
+**Privileges needed to run**
 
 Run script as sudo or root
 
-5. Download the benchmakrs pdf from CIS (Ubuntu 22 server & Debian 11 server) before you run
+**Download the benchmakrs pdf from CIS (Ubuntu 22 server & Debian 11 server) before you run**
 
 Helps you understand every implemention and why CIS recommend them for security
 
