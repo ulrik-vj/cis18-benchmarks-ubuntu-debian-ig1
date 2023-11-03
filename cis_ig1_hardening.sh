@@ -22,7 +22,7 @@ yellow='\033[1;33m'
 green='\033[0;32m'
 red='\033[0;31m'
 reset='\033[0m'
-WAZUH_MANAGER_IP="192.168.100.140" # Optional for wazuh log mangement server
+WAZUH_MANAGER_IP="{YOURWAZUHIP}" # Optional for wazuh log mangement server
 WAZUH_REPO="deb [signed-by=/usr/share/keyrings/wazuh.gpg] https://packages.wazuh.com/4.x/apt/ stable main" #  Version changes. So this varible must be updatet from time to time
 
 
