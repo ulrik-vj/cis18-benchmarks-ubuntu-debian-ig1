@@ -56,9 +56,9 @@ sudo chmod +x cis_ig1_hardening.sh
 - [ ] Make commands in script more readable
 - [ ] Make script seperate partitions if possible
 - [ ] Make user be able to choice what benchmarks they want from main function to call (all of them or pick and chose), instead of having to comment it out in main function.
-- [ ] Implement cloud init fix when updating grub from files in the dir /etc/default/grub.d/ when making bootloader changes. This occour if user is using cloud init server images. Manual fix right now is
+- [ ] Implement cloud init fix when updating grub from files in the dir /etc/default/grub.d/ when making bootloader changes. This occour if user is using cloud init server images. Manual fix right now is:
 	```bash 
-	rm /etc/default/grub.d/*
+	rm /etc/default/grub.d/{cloud init configs found here}
 	```
 - [ ] If user wish to only boot into VM using bootlader password, enable so they can. Right now bootloader PW is only required for entering boot parameters for my own convenience. Others might want this feature on.
 
