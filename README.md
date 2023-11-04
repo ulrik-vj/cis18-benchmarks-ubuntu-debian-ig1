@@ -14,7 +14,7 @@ It's function is only intended for one time use on a new server setup.
 
 **Partitions**
 
-If you wish having seperate partitions according to CIS 18 IG1, you must create these during installation of server. Pick sizes of your prefered liking:
+If you wish having seperate partitions according to CIS 18 IG1, you must create these during installation of server. It would be a good idea to do while isntalling debian 11 or Ubuntu 22. Pick sizes of your prefered liking:
 
 - /var
 - /var/tmp
@@ -53,7 +53,6 @@ sudo chmod +x cis_ig1_hardening.sh
 
 ## Would be nice to implement in the future
 - [ ] Make commands in script more readable
-- [ ] Make script seperate partitions if possible
 - [ ] Make user be able to choice what benchmarks they want from main function to call (all of them or pick and chose), instead of having to comment it out in main function.
 - [ ] Implement cloud init fix when updating grub from files in the dir /etc/default/grub.d/ when making bootloader changes. This occour if user is using cloud init server images. Manual fix right now is:
 	```bash 
