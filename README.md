@@ -4,7 +4,7 @@ Bash script developed for hardening ubuntu 22 and debian 11 according to CIS IG1
 It's function is only intended for one time use on a new server setup.
 
 
-## Info regarding Hostbased Firewall, Remote Log Server, bootloader, IVP4
+## Info regarding Hostbased Firewall, Remote Log Server, bootloader, Ipv4
 
 **Firewall** this script is using IPtables. Not UFW or NFtables, they are removed according to CIS requirements, because IPtables was chosen as primary.
 
@@ -12,7 +12,7 @@ It's function is only intended for one time use on a new server setup.
 
 **Bootloader** the script is using grub as default bootloader.
 
-**IVP** the script will only use IVP4 and disable IVP6.
+**Ipv4** the script will only use ipv4 and disable ipv6.
 
 
 ## Prerequisites before running the script
