@@ -4,17 +4,22 @@ Bash script developed for hardening ubuntu 22 and debian 11 according to CIS IG1
 It's function is only intended for one time use on a new server setup.
 
 
-## Info regarding Hostbased Firewall, Remote Log Server
+## Info regarding Hostbased Firewall, Remote Log Server, bootloader, IVP4
 
 **Firewall** this script is using IPtables. Not UFW or NFtables, they are removed according to CIS requirements, because IPtables was chosen as primary.
 
 **Log server** this script is using Wazuh as remote log server [What is Wazuh ?](https://documentation.wazuh.com/current/getting-started/architecture.html)
 
+**Bootloader** the script is using grub as default bootloader.
+
+**IVP** the script will only use IVP4 and disable IVP6.
+
+
 ## Prerequisites before running the script
 
 **Partitions**
 
-If you wish having seperate partitions according to CIS 18 IG1, you must create these during installation of server. It would be a good idea to do while isntalling debian 11 or Ubuntu 22. Pick sizes of your prefered liking:
+If you wish having seperate partitions according to CIS 18 IG1, you must create these during installation of server. It would be a good idea to do while isntalling debian 11 or Ubuntu 22. Research and implement sizes according to your own server requirements:
 
 - /var
 - /var/tmp
