@@ -53,7 +53,7 @@ Helps you understand every implemention and why CIS recommend them for security
 git clone git@github.com:ulrik-vj/cis18-benchmarks-ubuntu-debian-ig1.git
 cd cis18-benchmarks-ubuntu-debian-ig
 sudo chmod +x cis_ig1_hardening.sh
-./cis_ig1_hardening.sh
+sudo ./cis_ig1_hardening.sh
 ```
 
 ## Would be nice to implement in the future
