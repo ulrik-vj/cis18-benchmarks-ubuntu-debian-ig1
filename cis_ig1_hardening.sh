@@ -271,7 +271,7 @@ perform_package_option() {
 #-----------------------------------------------------
 # --- 1. INITIAL SETUP ---
 # ---- 1.1 Filesystem Configuration ----
-# --- Inserted here instead of beginning because Wazuh requires exec for /tmp when installing agent. ---
+# --- Will not be called first from main func. Becuase Wazuh requires exec for /tmp when installing agent. ---
 #-----------------------------------------------------
 
 filesytem_configuration() {
