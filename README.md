@@ -35,7 +35,7 @@ I have made a iptables_rules.txt file with some default rules for cis recommenda
 
 **Chosing what benchmarks to run**
 
-At the end of the script there is a main function calling the other functions. You can pick and choice what benchmarks you want according to those. Lets say you do not wish to use to use Wazuh because you dont have a Wazuh server, comment the function call out. Then it will be your own responsibilty to setup this part yourself. Same goes for the rest. 
+At the end of the script there is a main function calling the other functions. You can pick and decide what benchmarks you want according to those. Lets say you do not wish to use to use Wazuh because you dont have a Wazuh server, comment the function call out. Then it will be your own responsibilty to setup this part yourself. Same goes for the rest. 
 By default everything is set to run.
 
 **Privileges needed to run**

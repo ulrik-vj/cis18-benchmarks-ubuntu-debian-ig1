@@ -737,7 +737,7 @@ perform_command_option "5.4.1.4 Ensure inactive password lock is 30 days or less
 perform_command_option "5.4.3 Ensure default group for the root account is GID 0 (Automated)" "usermod -g 0 root"
 perform_command_option "5.4.4 Ensure default user umask is 027 or more restrictive (Automated)" "touch /etc/profile.d/set_umask.sh ; echo 'umask 027' >> touch /etc/profile.d/set_umask.sh"
 perform_command_option "5.4.5 Ensure default user shell timeout is 900 seconds or less (Automated)" "readonly TMOUT=900 ; export TMOUT"
-perform_manual_command "5.5.1.5 Ensure all users last password change date is in the past" "awk -F: '/^[^:]+:[^!*]/{print \$1}' /etc/shadow | while read -r usr; do change=\$(date -d \"\$(chage --list \$usr | grep '^Last password change' | cut -d: -f2 | grep -v 'never$')\" +%s); if [[  \"\$change\" -gt \"\$(date +%s)\" ]]; then echo \"User: \"\$usr\" last password change was \"\$(chage --list \$usr | grep '^Last password change' | cut -d: -f2)\"\"; fi; done && exit 1"
+perform_manual_command "5.5.1.5 Ensure all users last password change date is in the past" "awk -F: '/^[^:]+:[^!*]/{print \$1}' /etc/shadow | while read -r usr; do change=\$(date -d \"\$(chage --list \$usr | grep '^Last password change' | cut -d: -f2 | grep -v 'never$')\" +%s); if [[  \"\$change\" -gt \"\$(date +%s)\" ]]; then echo \"User: \"\$usr\" last password change was \"\$(chage --list \$usr | grep '^Last password change' | cut -d: -f2)\"\"; else echo \"last password change for $usr OK\" ; fi; done"
 
 }
 
