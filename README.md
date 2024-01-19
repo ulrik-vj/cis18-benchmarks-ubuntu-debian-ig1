@@ -10,7 +10,7 @@ It's function is only intended for one time use on a new server setup.
 
 **Log server** this script is using Wazuh as remote log server [What is Wazuh ?](https://documentation.wazuh.com/current/getting-started/architecture.html)
 
-**Bootloader** the script is using grub as default bootloader.
+**Bootloader** the script is using grub as default bootloader. It will create a password, that is required for changing boot paramters. But not required to boot the system for convenience.
 
 **Ipv4** the script will only use ipv4 and disable ipv6.
 
@@ -56,14 +56,14 @@ sudo chmod +x cis_ig1_hardening.sh
 sudo ./cis_ig1_hardening.sh
 ```
 
-## Would be nice to implement in the future
+## Implmentation to be added feb+
 - [ ] Make commands in script more readable
 - [ ] Make user be able to decide what benchmarks they want from main function to call (all of them or pick and chose), instead of having to comment it out in main function.
+- [ ] Add rsyslog function if rsylogs is prefered instead
 - [ ] Implement cloud init fix when updating grub from files in the dir /etc/default/grub.d/ when making bootloader changes. This might occour if user is using Cloud-init server images. Manual fix right now is:
 	```bash 
 	rm /etc/default/grub.d/{Cloud-init configs found here}
 	```
-- [ ] If user wish to only boot into VM using bootlader password, enable so they can. Right now bootloader PW is only required for entering boot parameters for my own convenience. Others might want this feature on.
 
 ## License
 
