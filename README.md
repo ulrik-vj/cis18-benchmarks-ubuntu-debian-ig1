@@ -14,6 +14,8 @@ It's function is only intended for one time use on a new server setup.
 
 **Ipv4** the script will only use ipv4 and disable ipv6.
 
+**Systemlogs** Journald is used for systemlogs. Not Ryslogs.
+
 
 ## Prerequisites before running the script
 
@@ -40,7 +42,7 @@ By default everything is set to run.
 
 **Privileges needed to run**
 
-Run script as sudo or root
+Run script as sudo
 
 **Download the benchmarks pdf from CIS (Ubuntu 22 server & Debian 11 server) before you run**
 
@@ -55,15 +57,6 @@ cd cis18-benchmarks-ubuntu-debian-ig1
 sudo chmod +x cis_ig1_hardening.sh
 sudo ./cis_ig1_hardening.sh
 ```
-
-## Implmentation to be added feb+
-- [ ] Make commands in script more readable
-- [ ] Make user be able to decide what benchmarks they want from main function to call (all of them or pick and chose), instead of having to comment it out in main function.
-- [ ] Add rsyslog function if rsylogs is prefered instead
-- [ ] Implement cloud init fix when updating grub from files in the dir /etc/default/grub.d/ when making bootloader changes. This might occour if user is using Cloud-init server images. Manual fix right now is:
-	```bash 
-	rm /etc/default/grub.d/{Cloud-init configs found here}
-	```
 
 ## License
 
